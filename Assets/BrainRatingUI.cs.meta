@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: e54c9164d2f21054b97ec4c547b0475b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - brainRatingRoot: {instanceID: 0}
+  - collected: {fileID: -682604738677189791, guid: d793c8a642a5add4db68f09cc0de59e9, type: 3}
+  - empty: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

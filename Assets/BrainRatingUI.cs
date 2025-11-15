@@ -4,9 +4,9 @@ using static System.Net.Mime.MediaTypeNames;
 
 public class BrainRatingUI : MonoBehaviour
 {
-    [SerializeField] Transform brainRatingRoot;   // assign BrainRating; defaults to this transform
-    [SerializeField] Sprite darkGraySquare;       // collected
-    [SerializeField] Sprite lightGraySquare;      // empty
+    [SerializeField] Transform brainRatingRoot;
+    [SerializeField] Sprite collected;
+    [SerializeField] Sprite empty;
 
     public int level1, level2, level3, level4, level5, level6, level7, level8; // 0–3
 
@@ -36,7 +36,7 @@ public class BrainRatingUI : MonoBehaviour
             UnityEngine.UI.Image img = t.GetComponent<UnityEngine.UI.Image>();
             if (!img) continue;
 
-            img.sprite = (slot <= rating) ? darkGraySquare : lightGraySquare;
+            img.sprite = (slot <= rating) ? collected : empty;
         }
     }
 }
