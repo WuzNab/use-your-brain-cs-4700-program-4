@@ -24,8 +24,8 @@ public class MovingPlatScript : MonoBehaviour
     // Update this so that you change the collision to the name of the wall script that we collide to 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<Lava>() != null ||
-        collision.GetComponentInParent<Lava>() != null)
+        if (collision.GetComponent<Grid>() != null ||
+        collision.GetComponentInParent<Grid>() != null)
         {
             dirX *= -1f;
         }
