@@ -21,7 +21,7 @@ public class PressurePlate : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && GetComponent<SpriteRenderer>().name == "balloonBaby")
         {
             playersOnPlate++;
 
