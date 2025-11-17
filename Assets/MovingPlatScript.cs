@@ -31,8 +31,7 @@ public class MovingPlatScript : MonoBehaviour
     }
     private void OnDrawGizmos()
     {
-        if (collision.GetComponent<Grid>() != null ||
-        collision.GetComponentInParent<Grid>() != null)
+        if (platform != null && startPoint != null && endPoint != null)
         {
             Gizmos.DrawLine(platform.transform.position, startPoint.position);
             Gizmos.DrawLine(platform.transform.position, endPoint.position);
