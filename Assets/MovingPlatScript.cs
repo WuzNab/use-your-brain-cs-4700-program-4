@@ -1,38 +1,40 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class MovingPlatScript : MonoBehaviour
 {
-    private Rigidbody2D rb;
-     private float dirX;
-    private float moveSpeed = 3f;
-    private Vector3 localScale;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public Transform platform;
+    public Transform startPoint;
+    public Transform endPoint;
+    public float speed = 1.5f;
+    int direction = -1;
+    private void Update()
     {
-        localScale = transform.localScale;
-        rb = GetComponent<Rigidbody2D>();
-        dirX = -1f;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-    
-    // Update this so that you change the collision to the name of the wall script that we collide to 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.GetComponent<Lava>() != null ||
-        collision.GetComponentInParent<Lava>() != null)
+        Vector2 target = currentMovementTarget();
+        platform.position = Vector2.Lerp(platform.position, target, speed * Time.deltaTime);
+        float distance = (target - (Vector2)platform.position).magnitude;
+        if (distance < 0.1f)
         {
-            dirX *= -1f;
+            direction *= -1;
         }
     }
 
-    void FixedUpdate()
+    Vector2 currentMovementTarget()
     {
-        rb.linearVelocity = new Vector2(dirX * moveSpeed, rb.linearVelocity.y);
+        if (direction == 1)
+        {
+            return startPoint.position;
+        }
+        else
+            return endPoint.position;
+
+    }
+    private void OnDrawGizmos()
+    {
+        if (platform != null && startPoint != null && endPoint != null)
+        {
+            Gizmos.DrawLine(platform.transform.position, startPoint.position);
+            Gizmos.DrawLine(platform.transform.position, endPoint.position);
+        }
     }
 }
