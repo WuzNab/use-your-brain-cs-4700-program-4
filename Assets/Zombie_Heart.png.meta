@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9f0eda09b79c48c4d81a11cdc602c2ce
+guid: 5e6dbbbf0126eb14d9c47222252e8962
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2608861716716564195
-    second: Light_Gray_Square_0
+      213: 155596078900465899
+    second: Zombie_Heart_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Light_Gray_Square_0
+      name: Zombie_Heart_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 250
-        height: 250
+        x: 19
+        y: 29
+        width: 122
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3eea105b8e9843420800000000000000
-      internalID: 2608861716716564195
+      spriteID: be05e433fc9c82200800000000000000
+      internalID: 155596078900465899
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Light_Gray_Square_0: 2608861716716564195
+      Zombie_Heart_0: 155596078900465899
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelSelector : MonoBehaviour
+public class Level_Selector_Menu : MonoBehaviour
 {
     public void LoadLevel1()
     {
