@@ -9,6 +9,23 @@ public class CameraFollow : MonoBehaviour
     public Vector2 threshold;
     public float speed = 3f;
     private Rigidbody2D rb;
+
+    public GameObject[] players; // size 3
+    public CameraFollow cam;     // assign in Inspector
+    private int activePlayer = 0;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1)) SwitchTo(0);
+        if (Input.GetKeyDown(KeyCode.Alpha2)) SwitchTo(1);
+        if (Input.GetKeyDown(KeyCode.Alpha3)) SwitchTo(2);
+    }
+
+    void SwitchTo(int index)
+    {
+        activePlayer = index;
+        cam.SetFollowTarget(players[index]);
+    }
     void Start()
     {
         threshold = calculateThreshold();
@@ -47,5 +64,10 @@ public class CameraFollow : MonoBehaviour
         Gizmos.color = Color.blue;
         Vector2 border = calculateThreshold();
         Gizmos.DrawWireCube(transform.position, new Vector3(border.x * 2, border.y * 2, 1));
+    }
+    public void SetFollowTarget(GameObject newTarget)
+    {
+        followObject = newTarget;
+        rb = followObject.GetComponent<Rigidbody2D>();
     }
 }
