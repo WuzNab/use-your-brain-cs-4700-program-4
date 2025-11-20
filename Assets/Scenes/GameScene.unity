@@ -8409,6 +8409,11 @@ MonoBehaviour:
   followOffset: {x: 4, y: 4}
   threshold: {x: 0, y: 0}
   speed: 3
+  players:
+  - {fileID: 597465451}
+  - {fileID: 637217649}
+  - {fileID: 697250181}
+  cam: {fileID: 519420033}
 --- !u!1 &597465451
 GameObject:
   m_ObjectHideFlags: 0
