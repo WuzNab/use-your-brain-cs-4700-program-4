@@ -54,7 +54,7 @@ public class PressurePlate : MonoBehaviour
         // Example: enable a platform or open a door
         if (target != null)
         {
-            target.SetActive(true);
+            target.SetActive(false);
         }
     }
 
@@ -66,7 +66,7 @@ public class PressurePlate : MonoBehaviour
         // Example: disable the platform / close door
         if (target != null)
         {
-            target.SetActive(false);
+            target.SetActive(true);
         }
     }
 }

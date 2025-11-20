@@ -11,7 +11,7 @@ public class MovingPlatScript : MonoBehaviour
     private void Update()
     {
         Vector2 target = currentMovementTarget();
-        platform.position = Vector2.Lerp(platform.position, target, speed * Time.deltaTime);
+        platform.position = Vector2.MoveTowards(platform.position, target,speed * Time.deltaTime);
         float distance = (target - (Vector2)platform.position).magnitude;
         if (distance < 0.1f)
         {
@@ -40,7 +40,7 @@ public class MovingPlatScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && collision.collider.name != "BalloonBaby")
         {
             collision.gameObject.transform.SetParent(platform);
         }
@@ -48,7 +48,7 @@ public class MovingPlatScript : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && collision.collider.name != "BalloonBaby")
         {
             collision.gameObject.transform.SetParent(null);
         }
