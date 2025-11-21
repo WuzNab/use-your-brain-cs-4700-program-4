@@ -7,7 +7,7 @@ public class CameraFollow : MonoBehaviour
     public GameObject followObject;
     public Vector2 followOffset;
     public Vector2 threshold;
-    public float speed = 3f;
+    public float speed = 4f;
     private Rigidbody2D rb;
 
     public GameObject[] players; // size 3
@@ -24,7 +24,7 @@ public class CameraFollow : MonoBehaviour
     void SwitchTo(int index)
     {
         activePlayer = index;
-        cam.SetFollowTarget(players[index]);
+        cam.SetFollowTarget(players[index], true);
     }
     void Start()
     {
@@ -65,9 +65,22 @@ public class CameraFollow : MonoBehaviour
         Vector2 border = calculateThreshold();
         Gizmos.DrawWireCube(transform.position, new Vector3(border.x * 2, border.y * 2, 1));
     }
-    public void SetFollowTarget(GameObject newTarget)
+    public void SetFollowTarget(GameObject newTarget, bool snap = false)
     {
         followObject = newTarget;
         rb = followObject.GetComponent<Rigidbody2D>();
+        if (snap)
+            SnapToTarget();
     }
+
+    public void SnapToTarget()
+    {
+        if (followObject == null) return;
+
+        Vector3 pos = transform.position;
+        pos.x = followObject.transform.position.x;
+        pos.y = followObject.transform.position.y;
+        transform.position = pos;
+    }
+
 }

@@ -8408,7 +8408,7 @@ MonoBehaviour:
   followObject: {fileID: 597465451}
   followOffset: {x: 4, y: 4}
   threshold: {x: 0, y: 0}
-  speed: 3
+  speed: 4
   players:
   - {fileID: 597465451}
   - {fileID: 637217649}
