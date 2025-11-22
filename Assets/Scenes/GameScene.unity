@@ -8035,7 +8035,7 @@ Transform:
   m_GameObject: {fileID: 411400984}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.498, z: 0}
+  m_LocalPosition: {x: 0, y: -0.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9003,7 +9003,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BalloonPlayer
   moveSpeed: 5
-  jumpForce: 7
+  floatForce: 5
+  maxForceU: 5
+  maxForceD: -5
   groundCheck: {fileID: 411400985}
   groundCheckRadius: 0.2
   groundLayer:
@@ -9117,7 +9119,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 40992012cfbc81f42b1d35db918a456d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2

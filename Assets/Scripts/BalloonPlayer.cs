@@ -2,8 +2,10 @@ using UnityEngine;
 using System.Collections;
 public class BalloonPlayer : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float jumpForce = 7f;
+    public float moveSpeed = 4f;
+    public float floatForce = 3f;
+    public float maxForceU = 4f;
+    public float maxForceD = -5f;
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
@@ -27,23 +29,18 @@ public class BalloonPlayer : MonoBehaviour
 
     void Update()
     {
-        
-        
+
+            Vector2 vel = rb.linearVelocity;
             float moveInput = Input.GetAxis("Horizontal");
-            if (moveInput < 0.0f && facingRight == true && isGrounded)
+            if (moveInput < 0.0f && facingRight == true)
             {
                 FlipPlayer();
             }
-            else if (moveInput > 0.0f && facingRight == false && isGrounded)
+            else if (moveInput > 0.0f && facingRight == false)
             {
                 FlipPlayer();
             }
             rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
-
-            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-            {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            }
 
             SetAnimation(moveInput);
         
@@ -52,18 +49,37 @@ public class BalloonPlayer : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-        Vector2 currentVelocity = rb.linearVelocity;
-
-        if (currentVelocity.y < 0)
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
-            currentVelocity.y = Mathf.Max(currentVelocity.y, -maxFallingSpeed);
+            rb.AddForce(Vector2.up * floatForce, ForceMode2D.Force);
         }
 
-        rb.linearVelocity = currentVelocity;
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S) && !isGrounded)
+        {
+            rb.AddForce(Vector2.down * floatForce, ForceMode2D.Force);
+        }
+
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+        }
+
+        Vector2 vel = rb.linearVelocity;
+
+        // Upward clamp
+        if (vel.y > maxForceU)
+            vel.y = maxForceU;
+
+        // Optional downward clamp
+        if (vel.y < maxForceD)
+            vel.y = maxForceD;
+
+        rb.linearVelocity = vel;
     }
     private void SetAnimation(float moveInput)
     {
-        if (isGrounded)
+        if (isGrounded || rb.linearVelocity.y < 0)
         {
             if (moveInput == 0)
             {
