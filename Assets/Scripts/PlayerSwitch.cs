@@ -9,12 +9,17 @@ public class PlayerSwitch : MonoBehaviour
     public ConePlayer cone;
     public FootBallPlayer football;
     public BalloonPlayer balloon;
+
     public bool coneActive = true;
     public bool footballActive = false;
     public bool balloonActive = false;
     public Rigidbody2D coneRB;
     public Rigidbody2D footballRB;
     public Rigidbody2D balloonRB;
+
+    public Cone_Anim coneAnim;
+    public Football_Anim FootballAnim;
+    public BalloonAnim BalloonAnim;
 
     private void Start()
     {
