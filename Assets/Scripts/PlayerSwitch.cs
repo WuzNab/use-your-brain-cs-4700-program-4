@@ -9,6 +9,7 @@ public class PlayerSwitch : MonoBehaviour
     public ConePlayer cone;
     public FootBallPlayer football;
     public BalloonPlayer balloon;
+
     public bool coneActive = true;
     public bool footballActive = false;
     public bool balloonActive = false;
@@ -38,50 +39,57 @@ public class PlayerSwitch : MonoBehaviour
 
     public void coneSwitch()
     {
-        if (footballActive)
-        {
-            footballSR.sortingOrder = 1;
-            coneSR.sortingOrder = 2;
-            footballRB.linearVelocity = Vector2.zero;
-            football.enabled = false;
-            cone.enabled = true;
-            footballActive = false;
-            coneActive = true;
-        }
-        else if (balloonActive)
-        {
-            balloonSR.sortingOrder = 1;
-            coneSR.sortingOrder = 2;
-            balloonRB.linearVelocity = Vector2.zero;
-            balloon.enabled = false;
-            cone.enabled = true;
-            balloonActive = false;
-            coneActive =true;
-        }
+            if (footballActive)
+            {
+                footballSR.sortingOrder = 1;
+                coneSR.sortingOrder = 2;
+                footballRB.linearVelocity = Vector2.zero;
+                football.enabled = false;
+                cone.enabled = true;
+                footballActive = false;
+                coneActive = true;
+                football.ResetPlayerState();
+            }
+            else if (balloonActive)
+            {
+                balloonSR.sortingOrder = 1;
+                coneSR.sortingOrder = 2;
+                balloonRB.linearVelocity = Vector2.zero;
+                balloon.enabled = false;
+                cone.enabled = true;
+                balloonActive = false;
+                coneActive = true;
+                balloon.ResetPlayerState();
+            }
     }
 
     public void footballSwitch()
     {
-        if (coneActive)
-        {
-            coneSR.sortingOrder = 1;
-            footballSR.sortingOrder = 2;
-            coneRB.linearVelocity = Vector2.zero;
-            cone.enabled = false;
-            football.enabled = true;
-            coneActive = false;
-            footballActive = true;
-        }
-        else if (balloonActive)
-        {
-            balloonSR.sortingOrder = 1;
-            footballSR.sortingOrder = 2;
-            balloonRB.linearVelocity = Vector2.zero;
-            balloon.enabled = false;
-            football.enabled = true;
-            balloonActive = false;
-            footballActive = true;
-        }
+
+            if (coneActive)
+            {
+                coneSR.sortingOrder = 1;
+                footballSR.sortingOrder = 2;
+                coneRB.linearVelocity = Vector2.zero;
+                cone.enabled = false;
+                football.enabled = true;
+                coneActive = false;
+                footballActive = true;
+                cone.ResetPlayerState();
+
+            }
+            else if (balloonActive)
+            {
+                balloonSR.sortingOrder = 1;
+                footballSR.sortingOrder = 2;
+                balloonRB.linearVelocity = Vector2.zero;
+                balloon.enabled = false;
+                football.enabled = true;
+                balloonActive = false;
+                footballActive = true;
+                balloon.ResetPlayerState();
+            }
+        
     }
 
     public void balloonSwitch()
@@ -95,6 +103,7 @@ public class PlayerSwitch : MonoBehaviour
             balloon.enabled = true;
             coneActive = false;
             balloonActive = true;
+            cone.ResetPlayerState();
         }
         else if (footballActive)
         {
@@ -105,6 +114,7 @@ public class PlayerSwitch : MonoBehaviour
             balloon.enabled = true;
             footballActive = false;
             balloonActive = true;
+            football.ResetPlayerState();
         }
     }
 }

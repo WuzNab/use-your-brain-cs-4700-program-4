@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
+
     public GameObject followObject;
     public Vector2 followOffset;
     public Vector2 threshold;
@@ -16,9 +17,18 @@ public class CameraFollow : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) SwitchTo(0);
-        if (Input.GetKeyDown(KeyCode.Alpha2)) SwitchTo(1);
-        if (Input.GetKeyDown(KeyCode.Alpha3)) SwitchTo(2);
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SwitchTo(0);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SwitchTo(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            SwitchTo(2);
+        }
     }
 
     void SwitchTo(int index)

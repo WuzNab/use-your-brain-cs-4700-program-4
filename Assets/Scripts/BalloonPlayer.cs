@@ -112,4 +112,10 @@ public class BalloonPlayer : MonoBehaviour
         transform.localScale = localScale;
     }
 
+    public void ResetPlayerState()
+    {
+        rb.linearVelocity = Vector2.zero;
+        animator.Play("Player_Idle");
+    }
+
 }
