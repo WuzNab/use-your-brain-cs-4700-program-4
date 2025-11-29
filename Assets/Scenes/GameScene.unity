@@ -9793,6 +9793,9 @@ MonoBehaviour:
   coneRB: {fileID: 597465453}
   footballRB: {fileID: 637217655}
   balloonRB: {fileID: 697250187}
+  coneAnim: {fileID: 0}
+  FootballAnim: {fileID: 0}
+  BalloonAnim: {fileID: 0}
 --- !u!4 &1707570037
 Transform:
   m_ObjectHideFlags: 0
