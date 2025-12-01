@@ -23,12 +23,12 @@ public class SaveService : MonoBehaviour
 
     void NotifyChanged() => OnDataChanged?.Invoke();
 
-    /*[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     static void Bootstrap()
     {
         if (Instance == null)
             new GameObject("SaveService").AddComponent<SaveService>();
-    } */
+    }
 
     void Awake()
     {
@@ -92,27 +92,4 @@ public class SaveService : MonoBehaviour
     // autosave
     void OnApplicationPause(bool pause) { if (pause) Save(); }
     void OnApplicationQuit() => Save();
-
-    public void ClearData()
-    {
-        if (Data == null) return;
-
-        // Reset level completion
-        if (Data.levelCompleted != null)
-        {
-            for (int i = 0; i < Data.levelCompleted.Length; i++)
-                Data.levelCompleted[i] = false;
-        }
-
-        // Reset brain counts
-        if (Data.levelBrains != null)
-        {
-            for (int i = 0; i < Data.levelBrains.Length; i++)
-                Data.levelBrains[i] = 0;
-        }
-
-        // Save the cleared data back to disk
-        Save();
-}
-
 }

@@ -3,6 +3,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+
     public int brainsCollected = 0;
 
     private void Awake()
@@ -10,7 +11,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject); // persists across scenes
         }
         else
         {
@@ -21,21 +22,14 @@ public class GameManager : MonoBehaviour
     public void CollectBrain()
     {
         brainsCollected++;
-        brainsCollected = Mathf.Clamp(brainsCollected, 0, 3);
+        brainsCollected = Mathf.Clamp(brainsCollected, 0, 3); // max 3 per level
         Debug.Log($"GameManager brains count: {brainsCollected}");
     }
 
+    // ✅ Add this method to clear the count after saving
     public void ResetBrains()
     {
         brainsCollected = 0;
         Debug.Log("Brains reset for next level");
-    }
-
-    //  Debug helper
-    [ContextMenu("Clear Save")]
-    public void ClearSave()
-    {
-        SaveService.Instance.ClearData();
-        Debug.Log("Save data cleared");
     }
 }
