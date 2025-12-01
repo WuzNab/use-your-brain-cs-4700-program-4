@@ -19,9 +19,15 @@ public class Victory : MonoBehaviour
         int current = SceneManager.GetActiveScene().buildIndex;
         int next = current + 1;
 
-        if (next >= 8)
+        SaveService.Instance.SetCompleted(current, true);
+
+        if (next < SceneManager.sceneCountInBuildSettings)
         {
-            SceneManager.LoadScene(next);
+            SceneManager.LoadScene(next); // load next level
+        }
+        else
+        {
+            SceneManager.LoadScene(0); // no more levels, return to menu
         }
     }
 }

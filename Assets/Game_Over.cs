@@ -5,11 +5,13 @@ public class Game_Over : MonoBehaviour
 {
    public void Exit()
    {
-       SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
    }
 
    public void Restart()
    {
+       Time.timeScale = 1f;
        var current = SceneManager.GetActiveScene();
        SceneManager.LoadScene(current.buildIndex);
    }
@@ -21,7 +23,8 @@ public class Game_Over : MonoBehaviour
 
        if (prev >= 0)
        {
-           SceneManager.LoadScene(prev);
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(prev);
        }
    }
 }
