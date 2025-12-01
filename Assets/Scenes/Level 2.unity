@@ -1187,14 +1187,6 @@ CompositeCollider2D:
         Y: 150000000
       - X: -870000000
         Y: 150000000
-    - - X: -840000000
-        Y: 150000000
-      - X: -860000000
-        Y: 150000000
-      - X: -860000000
-        Y: 140000000
-      - X: -840000000
-        Y: 140000000
     - - X: -1090000000
         Y: 150000000
       - X: -1100000000
@@ -1202,6 +1194,14 @@ CompositeCollider2D:
       - X: -1100000000
         Y: 140000000
       - X: -1090000000
+        Y: 140000000
+    - - X: -840000000
+        Y: 150000000
+      - X: -860000000
+        Y: 150000000
+      - X: -860000000
+        Y: 140000000
+      - X: -840000000
         Y: 140000000
     - - X: -1110000000
         Y: 140000000
@@ -1211,14 +1211,6 @@ CompositeCollider2D:
         Y: 130000000
       - X: -1110000000
         Y: 130000000
-    - - X: -810000000
-        Y: 130000000
-      - X: -830000000
-        Y: 130000000
-      - X: -830000000
-        Y: 120000000
-      - X: -810000000
-        Y: 120000000
     - - X: -1130000000
         Y: 130000000
       - X: -1140000000
@@ -1226,6 +1218,14 @@ CompositeCollider2D:
       - X: -1140000000
         Y: 120000000
       - X: -1130000000
+        Y: 120000000
+    - - X: -810000000
+        Y: 130000000
+      - X: -830000000
+        Y: 130000000
+      - X: -830000000
+        Y: 120000000
+      - X: -810000000
         Y: 120000000
     - - X: -1020000000
         Y: 100000000
@@ -1259,14 +1259,6 @@ CompositeCollider2D:
         Y: 60000000
       - X: -1070000000
         Y: 60000000
-    - - X: -860000000
-        Y: 60000000
-      - X: -870000000
-        Y: 60000000
-      - X: -870000000
-        Y: 50000000
-      - X: -860000000
-        Y: 50000000
     - - X: -890000000
         Y: 60000000
       - X: -900000000
@@ -1275,13 +1267,13 @@ CompositeCollider2D:
         Y: 50000000
       - X: -890000000
         Y: 50000000
-    - - X: -1050000000
+    - - X: -860000000
         Y: 60000000
-      - X: -1060000000
+      - X: -870000000
         Y: 60000000
-      - X: -1060000000
+      - X: -870000000
         Y: 50000000
-      - X: -1050000000
+      - X: -860000000
         Y: 50000000
     - - X: -1000000000
         Y: 60000000
@@ -1291,6 +1283,14 @@ CompositeCollider2D:
         Y: 50000000
       - X: -1000000000
         Y: 50000000
+    - - X: -1050000000
+        Y: 60000000
+      - X: -1060000000
+        Y: 60000000
+      - X: -1060000000
+        Y: 50000000
+      - X: -1050000000
+        Y: 50000000
     - - X: -920000000
         Y: 50000000
       - X: -930000000
@@ -1299,13 +1299,13 @@ CompositeCollider2D:
         Y: 40000000
       - X: -920000000
         Y: 40000000
-    - - X: -970000000
+    - - X: -940000000
         Y: 40000000
-      - X: -1000000000
+      - X: -950000000
         Y: 40000000
-      - X: -1000000000
+      - X: -950000000
         Y: 30000000
-      - X: -970000000
+      - X: -940000000
         Y: 30000000
     - - X: -840000000
         Y: 40000000
@@ -1315,13 +1315,13 @@ CompositeCollider2D:
         Y: 30000000
       - X: -840000000
         Y: 30000000
-    - - X: -940000000
+    - - X: -970000000
         Y: 40000000
-      - X: -950000000
+      - X: -1000000000
         Y: 40000000
-      - X: -950000000
+      - X: -1000000000
         Y: 30000000
-      - X: -940000000
+      - X: -970000000
         Y: 30000000
     - - X: -820000000
         Y: 20000000
@@ -1331,14 +1331,6 @@ CompositeCollider2D:
         Y: 10000000
       - X: -820000000
         Y: 10000000
-    - - X: -1090000000
-        Y: 10000000
-      - X: -1120000000
-        Y: 10000000
-      - X: -1120000000
-        Y: 0
-      - X: -1090000000
-        Y: 0
     - - X: -880000000
         Y: 10000000
       - X: -890000000
@@ -1347,14 +1339,14 @@ CompositeCollider2D:
         Y: 0
       - X: -880000000
         Y: 0
-    - - X: -900000000
+    - - X: -1090000000
+        Y: 10000000
+      - X: -1120000000
+        Y: 10000000
+      - X: -1120000000
         Y: 0
-      - X: -910000000
+      - X: -1090000000
         Y: 0
-      - X: -910000000
-        Y: -10000000
-      - X: -900000000
-        Y: -10000000
     - - X: -840000000
         Y: 0
       - X: -850000000
@@ -1370,6 +1362,14 @@ CompositeCollider2D:
       - X: -870000000
         Y: -10000000
       - X: -860000000
+        Y: -10000000
+    - - X: -900000000
+        Y: 0
+      - X: -910000000
+        Y: 0
+      - X: -910000000
+        Y: -10000000
+      - X: -900000000
         Y: -10000000
   m_CompositePaths:
     m_Paths:
@@ -1381,11 +1381,7 @@ CompositeCollider2D:
       - {x: -79.00003, y: 24}
       - {x: -117, y: 23.999971}
       - {x: -116.99998, y: -4}
-    - - {x: -80, y: -1.9999707}
-      - {x: -92, y: -1.9999707}
-      - {x: -92.00003, y: -1}
-      - {x: -93, y: -1.0000293}
-      - {x: -93.00003, y: -2}
+    - - {x: -93, y: -1.9999707}
       - {x: -116, y: -1.9999707}
       - {x: -115.99998, y: 3}
       - {x: -102, y: 3.0000293}
@@ -1423,6 +1419,10 @@ CompositeCollider2D:
       - {x: -100, y: 10.99997}
       - {x: -99.99997, y: 10}
       - {x: -80, y: 9.99997}
+      - {x: -80.00003, y: -2}
+      - {x: -92, y: -1.9999707}
+      - {x: -92.00003, y: -1}
+      - {x: -93, y: -1.0000293}
     - - {x: -107.00003, y: 15}
       - {x: -107.00003, y: 16}
       - {x: -108, y: 15.999971}
@@ -1467,22 +1467,22 @@ CompositeCollider2D:
       - {x: -107.00003, y: 7}
       - {x: -108, y: 6.9999704}
       - {x: -107.99998, y: 6}
-    - - {x: -105.00003, y: 5}
-      - {x: -105.00003, y: 6}
-      - {x: -106, y: 5.999971}
-      - {x: -105.99997, y: 5}
-    - - {x: -100.00003, y: 5}
-      - {x: -100.00003, y: 6}
-      - {x: -101, y: 5.999971}
-      - {x: -100.99997, y: 5}
-    - - {x: -89.00003, y: 5}
-      - {x: -89.00003, y: 6}
-      - {x: -90, y: 5.999971}
-      - {x: -89.99997, y: 5}
     - - {x: -86.00003, y: 5}
       - {x: -86.00003, y: 6}
       - {x: -87, y: 5.999971}
       - {x: -86.99997, y: 5}
+    - - {x: -89.00003, y: 5}
+      - {x: -89.00003, y: 6}
+      - {x: -90, y: 5.999971}
+      - {x: -89.99997, y: 5}
+    - - {x: -100.00003, y: 5}
+      - {x: -100.00003, y: 6}
+      - {x: -101, y: 5.999971}
+      - {x: -100.99997, y: 5}
+    - - {x: -105.00003, y: 5}
+      - {x: -105.00003, y: 6}
+      - {x: -106, y: 5.999971}
+      - {x: -105.99997, y: 5}
     - - {x: -92.00003, y: 4}
       - {x: -92.00003, y: 5}
       - {x: -93, y: 4.999971}
@@ -8480,81 +8480,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471634658}
   m_CullTransparentMesh: 1
---- !u!1 &476310298
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 476310299}
-  - component: {fileID: 476310301}
-  - component: {fileID: 476310300}
-  m_Layer: 5
-  m_Name: Brain_1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &476310299
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 476310298}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1417660402}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 368, y: 217}
-  m_SizeDelta: {x: 50, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &476310300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 476310298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: -1336635434512374631, guid: 514c7899bffa56e4b9998fd404710508, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &476310301
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 476310298}
-  m_CullTransparentMesh: 1
 --- !u!1 &484431574
 GameObject:
   m_ObjectHideFlags: 0
@@ -9738,7 +9663,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1298348432}
-  - {fileID: 1417660402}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -13819,60 +13743,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379712046}
   m_CullTransparentMesh: 1
---- !u!1 &1417660401
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1417660402}
-  - component: {fileID: 1417660403}
-  m_Layer: 5
-  m_Name: Brains_Collectable
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1417660402
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417660401}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 476310299}
-  - {fileID: 2066664051}
-  - {fileID: 1891608620}
-  m_Father: {fileID: 671877904}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 127, y: 122}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1417660403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417660401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e91f75bc29f73fa47b57b12da77e61fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Brain_Rating_Per_Level
-  level: 1
-  collected: {fileID: -682604738677189791, guid: d793c8a642a5add4db68f09cc0de59e9, type: 3}
-  empty: {fileID: -1336635434512374631, guid: 514c7899bffa56e4b9998fd404710508, type: 3}
 --- !u!1 &1425866668
 GameObject:
   m_ObjectHideFlags: 0
@@ -16862,81 +16732,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850710935}
   m_CullTransparentMesh: 1
---- !u!1 &1891608619
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1891608620}
-  - component: {fileID: 1891608622}
-  - component: {fileID: 1891608621}
-  m_Layer: 5
-  m_Name: Brain_3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1891608620
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1891608619}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1417660402}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 492, y: 217}
-  m_SizeDelta: {x: 50, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1891608621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1891608619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: -1336635434512374631, guid: 514c7899bffa56e4b9998fd404710508, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1891608622
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1891608619}
-  m_CullTransparentMesh: 1
 --- !u!1 &1907495900
 GameObject:
   m_ObjectHideFlags: 0
@@ -17974,81 +17769,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042946236}
-  m_CullTransparentMesh: 1
---- !u!1 &2066664050
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2066664051}
-  - component: {fileID: 2066664053}
-  - component: {fileID: 2066664052}
-  m_Layer: 5
-  m_Name: Brain_2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2066664051
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2066664050}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1417660402}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 429, y: 217}
-  m_SizeDelta: {x: 50, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2066664052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2066664050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: -1336635434512374631, guid: 514c7899bffa56e4b9998fd404710508, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2066664053
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2066664050}
   m_CullTransparentMesh: 1
 --- !u!1 &2100224068
 GameObject:
