@@ -30,20 +30,20 @@ public class BalloonPlayer : MonoBehaviour
     void Update()
     {
 
-            Vector2 vel = rb.linearVelocity;
-            float moveInput = Input.GetAxis("Horizontal");
-            if (moveInput < 0.0f && facingRight == true)
-            {
-                FlipPlayer();
-            }
-            else if (moveInput > 0.0f && facingRight == false)
-            {
-                FlipPlayer();
-            }
-            rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        Vector2 vel = rb.linearVelocity;
+        float moveInput = Input.GetAxis("Horizontal");
+        if (moveInput < 0.0f && facingRight == true)
+        {
+            FlipPlayer();
+        }
+        else if (moveInput > 0.0f && facingRight == false)
+        {
+            FlipPlayer();
+        }
+        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
-            SetAnimation(moveInput);
-        
+        SetAnimation(moveInput);
+
     }
     private void FixedUpdate()
     {
