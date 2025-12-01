@@ -133,6 +133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   target: {fileID: 0}
+  srprsed: {fileID: 0}
+  srunprsed: {fileID: 0}
   idleColor: {r: 1, g: 0, b: 0, a: 1}
   pressedColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!61 &8554482851263292553

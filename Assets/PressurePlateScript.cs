@@ -3,8 +3,9 @@ using UnityEngine;
 public class PressurePlate : MonoBehaviour
 {
     public GameObject target; // e.g. door, platform, etc.
-
     private SpriteRenderer sr;
+    public SpriteRenderer srprsed;
+    public SpriteRenderer srunprsed; 
     public Color idleColor = Color.white;
     public Color pressedColor = Color.green;
 
