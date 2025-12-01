@@ -3,7 +3,7 @@ using System.Collections;
 
 public class HP_System_BalloonBaby : MonoBehaviour
 {
-    public int health = 50;
+    public int health = 1;
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     public Transform groundCheck;
@@ -25,6 +25,7 @@ public class HP_System_BalloonBaby : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        Hit_Points.Instance.SetBalloonHP(2);
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -32,7 +33,7 @@ public class HP_System_BalloonBaby : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Damage") && isInvincible == false)
         {
-            health -= 50;
+            Hit_Points.Instance.DamageBalloon(1);
             StartCoroutine(BecomeTemporarilyInvincible());
 
             if (health <= 0)
@@ -42,6 +43,7 @@ public class HP_System_BalloonBaby : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Death"))
         {
+            Hit_Points.Instance.SetBalloonHP(0);
             Die();
         }
         else if (collision.gameObject.CompareTag("Super"))
@@ -69,7 +71,8 @@ public class HP_System_BalloonBaby : MonoBehaviour
     }
     private void Die()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+        if (Hit_Points.IsGameOver) { Time.timeScale = 0f; }
     }
+
 }
 

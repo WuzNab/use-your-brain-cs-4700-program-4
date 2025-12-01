@@ -3,7 +3,7 @@ using System.Collections;
 
 public class HP_System_FootBaller : MonoBehaviour
 {
-    public int health = 150;
+    public int health = 3;
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     public Transform groundCheck;
@@ -25,6 +25,7 @@ public class HP_System_FootBaller : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        Hit_Points.Instance.SetFootballHP(health);
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -32,16 +33,18 @@ public class HP_System_FootBaller : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Damage") && isInvincible == false)
         {
-            health -= 50;
+            Hit_Points.Instance.DamageFootball(1);
             StartCoroutine(BecomeTemporarilyInvincible());
 
-            if (health <= 0)
+            if (Hit_Points.Instance.Football_Zombie_Hit_Points <= 0)
             {
+               
                 Die();
             }
         }
         else if (collision.gameObject.CompareTag("Death"))
         {
+            Hit_Points.Instance.SetFootballHP(0);
             Die();
         }
         else if (collision.gameObject.CompareTag("Super"))
@@ -69,6 +72,8 @@ public class HP_System_FootBaller : MonoBehaviour
     }
     private void Die()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+        if (Hit_Points.IsGameOver) { Time.timeScale = 0f; }
     }
+    
+
 }
