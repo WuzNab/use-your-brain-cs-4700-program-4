@@ -1,9 +1,10 @@
 using UnityEngine;
 using System.Collections;
 
+
 public class HP_System_ConeHead : MonoBehaviour 
 {
-    public int health = 100;
+    public int health = 3;
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     public Transform groundCheck;
@@ -25,6 +26,8 @@ public class HP_System_ConeHead : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        Hit_Points.Instance.SetConeHP(3);
+        
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -32,7 +35,8 @@ public class HP_System_ConeHead : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Damage") && isInvincible == false)
         {
-            health -= 50;
+            health -= 1;
+            Hit_Points.Instance.DamageCone();
             StartCoroutine(BecomeTemporarilyInvincible());
 
             if (health <= 0)
