@@ -3719,21 +3719,13 @@ CompositeCollider2D:
         Y: -30000000
       - X: -630000000
         Y: -30000000
-    - - X: -950000000
+    - - X: -890000000
         Y: -80000000
-      - X: -960000000
+      - X: -900000000
         Y: -80000000
-      - X: -960000000
+      - X: -900000000
         Y: -90000000
-      - X: -950000000
-        Y: -90000000
-    - - X: -930000000
-        Y: -80000000
-      - X: -940000000
-        Y: -80000000
-      - X: -940000000
-        Y: -90000000
-      - X: -930000000
+      - X: -890000000
         Y: -90000000
     - - X: -910000000
         Y: -80000000
@@ -3743,13 +3735,21 @@ CompositeCollider2D:
         Y: -90000000
       - X: -910000000
         Y: -90000000
-    - - X: -890000000
+    - - X: -930000000
         Y: -80000000
-      - X: -900000000
+      - X: -940000000
         Y: -80000000
-      - X: -900000000
+      - X: -940000000
         Y: -90000000
-      - X: -890000000
+      - X: -930000000
+        Y: -90000000
+    - - X: -950000000
+        Y: -80000000
+      - X: -960000000
+        Y: -80000000
+      - X: -960000000
+        Y: -90000000
+      - X: -950000000
         Y: -90000000
     - - X: -970000000
         Y: -80000000
@@ -3783,14 +3783,6 @@ CompositeCollider2D:
         Y: -210000000
       - X: -840000000
         Y: -210000000
-    - - X: -700000000
-        Y: -260000000
-      - X: -720000000
-        Y: -260000000
-      - X: -720000000
-        Y: -270000000
-      - X: -700000000
-        Y: -270000000
     - - X: -660000000
         Y: -260000000
       - X: -680000000
@@ -3798,6 +3790,14 @@ CompositeCollider2D:
       - X: -680000000
         Y: -270000000
       - X: -660000000
+        Y: -270000000
+    - - X: -700000000
+        Y: -260000000
+      - X: -720000000
+        Y: -260000000
+      - X: -720000000
+        Y: -270000000
+      - X: -700000000
         Y: -270000000
     - - X: -860000000
         Y: -270000000
@@ -3929,6 +3929,10 @@ CompositeCollider2D:
       - {x: -89.00003, y: -8}
       - {x: -90, y: -8.00003}
       - {x: -89.99997, y: -9}
+    - - {x: -90.00003, y: -21}
+      - {x: -90.00003, y: -20}
+      - {x: -93, y: -20.000029}
+      - {x: -92.99997, y: -21}
     - - {x: -78.00003, y: -21}
       - {x: -78.00003, y: -20}
       - {x: -81, y: -20.000029}
@@ -3937,18 +3941,14 @@ CompositeCollider2D:
       - {x: -84.00003, y: -20}
       - {x: -87, y: -20.000029}
       - {x: -86.99997, y: -21}
-    - - {x: -90.00003, y: -21}
-      - {x: -90.00003, y: -20}
-      - {x: -93, y: -20.000029}
-      - {x: -92.99997, y: -21}
-    - - {x: -66.00003, y: -27}
-      - {x: -66.00003, y: -26}
-      - {x: -68, y: -26.000029}
-      - {x: -67.99997, y: -27}
     - - {x: -70.00003, y: -27}
       - {x: -70.00003, y: -26}
       - {x: -72, y: -26.000029}
       - {x: -71.99997, y: -27}
+    - - {x: -66.00003, y: -27}
+      - {x: -66.00003, y: -26}
+      - {x: -68, y: -26.000029}
+      - {x: -67.99997, y: -27}
     - - {x: -86.00003, y: -28}
       - {x: -86.00003, y: -27}
       - {x: -87, y: -27.000029}
@@ -9140,6 +9140,135 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 707167872}
   m_CullTransparentMesh: 1
+--- !u!1 &757937150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 757937152}
+  - component: {fileID: 757937151}
+  m_Layer: 0
+  m_Name: BackgroundMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &757937151
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757937150}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: eabd22772d0491e44b38c046c15ed00c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &757937152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757937150}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.87309, y: 8.38694, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &768918607
 GameObject:
   m_ObjectHideFlags: 0
@@ -19559,3 +19688,4 @@ SceneRoots:
   - {fileID: 917553614}
   - {fileID: 1598708417}
   - {fileID: 1260952719}
+  - {fileID: 757937152}

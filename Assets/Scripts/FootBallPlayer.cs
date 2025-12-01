@@ -28,26 +28,26 @@ public class FootBallPlayer : MonoBehaviour
 
     void Update()
     {
-        
-       
-            float moveInput = Input.GetAxis("Horizontal");
-            if (moveInput < 0.0f && facingRight == true && isGrounded)
-            {
-                FlipPlayer();
-            }
-            else if (moveInput > 0.0f && facingRight == false && isGrounded)
-            {
-                FlipPlayer();
-            }
-            rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
-            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && isGrounded)
-            {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            }
 
-            SetAnimation(moveInput);
-       
+        float moveInput = Input.GetAxis("Horizontal");
+        if (moveInput < 0.0f && facingRight == true && isGrounded)
+        {
+            FlipPlayer();
+        }
+        else if (moveInput > 0.0f && facingRight == false && isGrounded)
+        {
+            FlipPlayer();
+        }
+        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && isGrounded)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        }
+
+        SetAnimation(moveInput);
+
     }
     private void FixedUpdate()
     {

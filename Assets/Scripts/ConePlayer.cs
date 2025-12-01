@@ -9,6 +9,7 @@ public class ConePlayer : MonoBehaviour
     public LayerMask groundLayer;
     public bool facingRight = true;
     public float maxFallingSpeed = 5f;
+
     private Rigidbody2D rb;
     private bool isGrounded;
 
@@ -23,27 +24,27 @@ public class ConePlayer : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
-    
+
     void Update()
     {
 
-            float moveInput = Input.GetAxis("Horizontal");
-            if (moveInput < 0.0f && facingRight == true && isGrounded)
-            {
-                FlipPlayer();
-            }
-            else if (moveInput > 0.0f && facingRight == false && isGrounded)
-            {
-                FlipPlayer();
-            }
-            rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        float moveInput = Input.GetAxis("Horizontal");
+        if (moveInput < 0.0f && facingRight == true && isGrounded)
+        {
+            FlipPlayer();
+        }
+        else if (moveInput > 0.0f && facingRight == false && isGrounded)
+        {
+            FlipPlayer();
+        }
+        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
-            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && isGrounded)
-            {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            }
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && isGrounded)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        }
 
-            SetAnimation(moveInput);
+        SetAnimation(moveInput);
     }
     private void FixedUpdate()
     {
@@ -80,12 +81,12 @@ public class ConePlayer : MonoBehaviour
             else
             {
                 animator.Play("Player_Fall");
-                
+
             }
         }
     }
 
-    void FlipPlayer ()
+    void FlipPlayer()
     {
         facingRight = !facingRight;
         Vector2 localScale = gameObject.transform.localScale;
