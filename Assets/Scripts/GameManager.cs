@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
         Debug.Log($"GameManager brains count: {brainsCollected}");
     }
 
-    // ✅ Add this method to clear the count after saving
     public void ResetBrains()
     {
         brainsCollected = 0;
