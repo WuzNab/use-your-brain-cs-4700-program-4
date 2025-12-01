@@ -8838,7 +8838,7 @@ MonoBehaviour:
   groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   facingRight: 1
   maxFallingSpeed: 5
   invincibilityDuration: 1.5
@@ -8860,7 +8860,7 @@ MonoBehaviour:
   groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   facingRight: 1
   maxFallingSpeed: 5
 --- !u!1 &619394800
@@ -8987,7 +8987,7 @@ MonoBehaviour:
   groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   facingRight: 1
   maxFallingSpeed: 6.5
 --- !u!114 &637217651
@@ -9002,14 +9002,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faed6314b9424f6458ccd1ac6c2cd4a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HP_System_ConeHead
-  health: 150
+  health: 3
   moveSpeed: 5
   jumpForce: 10
   groundCheck: {fileID: 1180241091}
   groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   facingRight: 1
   maxFallingSpeed: 5
   invincibilityDuration: 1.5
@@ -9048,7 +9048,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -10010,7 +10010,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1152860639}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10041,7 +10041,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1180241091}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}

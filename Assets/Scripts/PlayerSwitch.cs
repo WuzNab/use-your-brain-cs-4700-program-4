@@ -24,8 +24,8 @@ public class PlayerSwitch : MonoBehaviour
         coneRB.constraints = RigidbodyConstraints2D.FreezeRotation; // allow movement
 
         // Freeze the other two zombies
-        footballRB.constraints = RigidbodyConstraints2D.FreezePositionX;
-        balloonRB.constraints = RigidbodyConstraints2D.FreezePositionX;
+        footballRB.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+        balloonRB.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
 
         // Make sure only Cone is active at start
         football.enabled = false;
@@ -69,13 +69,14 @@ public class PlayerSwitch : MonoBehaviour
                 footballRB.linearVelocity = Vector2.zero;
                 football.enabled = false;
                 footballActive = false;
-                footballRB.constraints = RigidbodyConstraints2D.FreezePositionX;
+                footballRB.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
 
                 cone.enabled = true;
                 coneActive = true;
+                coneRB.constraints = RigidbodyConstraints2D.FreezeRotation;
 
                 // Freeze the third character
-                balloonRB.constraints = RigidbodyConstraints2D.FreezePositionX;
+                balloonRB.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
             }
             else if (balloonActive)
             {
@@ -93,13 +94,14 @@ public class PlayerSwitch : MonoBehaviour
                 balloonRB.linearVelocity = Vector2.zero;
                 balloon.enabled = false;
                 balloonActive = false;
-                balloonRB.constraints = RigidbodyConstraints2D.FreezePositionX;
+                balloonRB.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
 
                 cone.enabled = true;
                 coneActive = true;
+                coneRB.constraints = RigidbodyConstraints2D.FreezeRotation;
 
                 // Freeze the third character
-                footballRB.constraints = RigidbodyConstraints2D.FreezePositionX;
+                footballRB.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
             }
     }
 
@@ -121,7 +123,7 @@ public class PlayerSwitch : MonoBehaviour
 
                 // Freeze cone
                 coneRB.linearVelocity = Vector2.zero;
-                coneRB.constraints = RigidbodyConstraints2D.FreezePositionX;
+                coneRB.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
 
                 // Enable football
                 cone.enabled = false;
@@ -131,7 +133,10 @@ public class PlayerSwitch : MonoBehaviour
                 cone.ResetPlayerState();
 
                 // Freeze balloon
-                balloonRB.constraints = RigidbodyConstraints2D.FreezePositionX;
+                balloonRB.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+
+                // UNFREEZE football
+                footballRB.constraints = RigidbodyConstraints2D.FreezeRotation;
 
             }
             else if (balloonActive)
@@ -149,7 +154,7 @@ public class PlayerSwitch : MonoBehaviour
 
                 // Freeze balloon
                 balloonRB.linearVelocity = Vector2.zero;
-                balloonRB.constraints = RigidbodyConstraints2D.FreezePositionX;
+                balloonRB.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
 
                 // Enable football
                 balloon.enabled = false;
@@ -159,8 +164,10 @@ public class PlayerSwitch : MonoBehaviour
                 balloon.ResetPlayerState();
 
                 // Freeze cone
-                coneRB.constraints = RigidbodyConstraints2D.FreezePositionX;
+                coneRB.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
 
+                // UNFREEZE football
+                footballRB.constraints = RigidbodyConstraints2D.FreezeRotation;
             }
         
     }
@@ -182,7 +189,7 @@ public class PlayerSwitch : MonoBehaviour
 
             // Freeze cone
             coneRB.linearVelocity = Vector2.zero;
-            coneRB.constraints = RigidbodyConstraints2D.FreezePositionX;
+            coneRB.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
 
             // Enable balloon
             cone.enabled = false;
@@ -192,7 +199,10 @@ public class PlayerSwitch : MonoBehaviour
             cone.ResetPlayerState();
 
             // Freeze football
-            footballRB.constraints = RigidbodyConstraints2D.FreezePositionX;
+            footballRB.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+
+            // UNFREEZE balloon
+            balloonRB.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
         else if (footballActive)
         {
@@ -209,7 +219,7 @@ public class PlayerSwitch : MonoBehaviour
 
             // Freeze football
             footballRB.linearVelocity = Vector2.zero;
-            footballRB.constraints = RigidbodyConstraints2D.FreezePositionX;
+            footballRB.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
 
             // Enable balloon
             football.enabled = false;
@@ -219,8 +229,10 @@ public class PlayerSwitch : MonoBehaviour
             football.ResetPlayerState();
 
             // Freeze cone
-            coneRB.constraints = RigidbodyConstraints2D.FreezePositionX;
+            coneRB.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
 
+            // UNFREEZE balloon
+            balloonRB.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
 }

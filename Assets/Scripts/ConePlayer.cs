@@ -9,7 +9,6 @@ public class ConePlayer : MonoBehaviour
     public LayerMask groundLayer;
     public bool facingRight = true;
     public float maxFallingSpeed = 5f;
-
     private Rigidbody2D rb;
     private bool isGrounded;
 
