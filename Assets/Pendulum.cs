@@ -30,7 +30,7 @@ public class Pendulum : MonoBehaviour
         {
             movingClockwise = true;
         }
-    }
+    }   
 
     public void Move()
     {
