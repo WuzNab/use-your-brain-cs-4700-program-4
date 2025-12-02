@@ -1,6 +1,10 @@
 # use-your-brain-cs-4700-program-4
 Game Dev, game final project.
 
+## Guide
+Can hover with balloon baby using space. Break brown blocks with football zombie. 
+Can collect brains for fun.
+
 ## Versions
 - Unity Engine: Unity 6.2 (6000.2.7.f2)
 - IDE: Microsoft Visual Studio Community 2022
