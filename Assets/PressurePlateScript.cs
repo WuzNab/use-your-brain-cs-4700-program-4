@@ -4,20 +4,21 @@ public class PressurePlate : MonoBehaviour
 {
     public GameObject target; // e.g. door, platform, etc.
     private SpriteRenderer sr;
-    public SpriteRenderer srprsed;
-    public SpriteRenderer srunprsed; 
-    public Color idleColor = Color.white;
-    public Color pressedColor = Color.green;
-
+    public Sprite idleSprite;
+    public Sprite spritePressed;
+    private AudioSource audioSource;
+    public AudioClip pressSound;
     private int playersOnPlate = 0;
 
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
         if (sr != null)
         {
-            sr.color = idleColor;
+            idleSprite = sr.sprite;
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -50,24 +51,39 @@ public class PressurePlate : MonoBehaviour
     void OnPressed()
     {
         Debug.Log("Plate pressed!");
-        if (sr != null) sr.color = pressedColor;
 
-        // Example: enable a platform or open a door
+        if (sr != null)
+        {
+            sr.sprite = spritePressed;
+        }
+
         if (target != null)
         {
             target.SetActive(false);
+        }
+        if (audioSource != null && pressSound != null)
+        {
+            audioSource.PlayOneShot(pressSound);
         }
     }
 
     void OnReleased()
     {
         Debug.Log("Plate released!");
-        if (sr != null) sr.color = idleColor;
 
-        // Example: disable the platform / close door
+        if (sr != null)
+        {
+            sr.sprite = idleSprite;
+        }
+
         if (target != null)
         {
             target.SetActive(true);
+        }
+
+        if (audioSource != null && pressSound != null)
+        {
+            audioSource.PlayOneShot(pressSound);
         }
     }
 }
