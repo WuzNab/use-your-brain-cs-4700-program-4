@@ -1,2 +1,13 @@
 fileFormatVersion: 2
 guid: 97ff9e869c04ce94891a2c81cc373732
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - levelManager: {instanceID: 0}
+  - Victory_Canvas: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
