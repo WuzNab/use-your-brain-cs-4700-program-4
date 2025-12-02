@@ -811,9 +811,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!212 &111669840
 SpriteRenderer:
@@ -10083,9 +10083,9 @@ GameObject:
   - component: {fileID: 1102966109}
   - component: {fileID: 1102966108}
   - component: {fileID: 1102966107}
-  - component: {fileID: 1102966106}
   - component: {fileID: 1102966105}
   - component: {fileID: 1102966104}
+  - component: {fileID: 1102966112}
   m_Layer: 7
   m_Name: FootBaller
   m_TagString: Player
@@ -10119,7 +10119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FootBallPlayer
   moveSpeed: 5
-  jumpForce: 7
+  jumpForce: 8
   groundCheck: {fileID: 1338087410}
   groundCheckRadius: 0.2
   groundLayer:
@@ -10127,29 +10127,6 @@ MonoBehaviour:
     m_Bits: 64
   facingRight: 1
   maxFallingSpeed: 6.5
---- !u!114 &1102966106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1102966103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faed6314b9424f6458ccd1ac6c2cd4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HP_System_ConeHead
-  health: 2
-  moveSpeed: 5
-  jumpForce: 10
-  groundCheck: {fileID: 0}
-  groundCheckRadius: 0.2
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  facingRight: 1
-  maxFallingSpeed: 5
-  invincibilityDuration: 1.5
 --- !u!95 &1102966107
 Animator:
   serializedVersion: 7
@@ -10185,10 +10162,10 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -10241,9 +10218,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!212 &1102966110
 SpriteRenderer:
@@ -10319,6 +10296,29 @@ Transform:
   - {fileID: 1338087410}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1102966112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102966103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 451b24eba9d4cf44da4ceb3ee5c85ef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HP_System_FootBaller
+  health: 3
+  moveSpeed: 5
+  jumpForce: 10
+  groundCheck: {fileID: 0}
+  groundCheckRadius: 0.2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  facingRight: 1
+  maxFallingSpeed: 5
+  invincibilityDuration: 1.5
 --- !u!1 &1116415572
 GameObject:
   m_ObjectHideFlags: 0
@@ -16086,9 +16086,9 @@ GameObject:
   - component: {fileID: 1993146880}
   - component: {fileID: 1993146879}
   - component: {fileID: 1993146878}
-  - component: {fileID: 1993146877}
   - component: {fileID: 1993146876}
   - component: {fileID: 1993146875}
+  - component: {fileID: 1993146883}
   m_Layer: 7
   m_Name: BalloonBaby
   m_TagString: Player
@@ -16132,29 +16132,6 @@ MonoBehaviour:
     m_Bits: 64
   facingRight: 1
   maxFallingSpeed: 6.5
---- !u!114 &1993146877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1993146874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faed6314b9424f6458ccd1ac6c2cd4a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HP_System_ConeHead
-  health: 2
-  moveSpeed: 5
-  jumpForce: 10
-  groundCheck: {fileID: 0}
-  groundCheckRadius: 0.2
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  facingRight: 1
-  maxFallingSpeed: 5
-  invincibilityDuration: 1.5
 --- !u!95 &1993146878
 Animator:
   serializedVersion: 7
@@ -16324,6 +16301,29 @@ Transform:
   - {fileID: 1151580498}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1993146883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993146874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e210718af9666845b3839a08e4804ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HP_System_BalloonBaby
+  health: 1
+  moveSpeed: 5
+  jumpForce: 10
+  groundCheck: {fileID: 0}
+  groundCheckRadius: 0.2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  facingRight: 1
+  maxFallingSpeed: 5
+  invincibilityDuration: 1.5
 --- !u!1 &2027189641
 GameObject:
   m_ObjectHideFlags: 0

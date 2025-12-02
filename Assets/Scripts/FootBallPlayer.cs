@@ -3,7 +3,7 @@ using System.Collections;
 public class FootBallPlayer : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float jumpForce = 7f;
+    public float jumpForce = 8f;
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
@@ -68,22 +68,22 @@ public class FootBallPlayer : MonoBehaviour
         {
             if (moveInput == 0)
             {
-                animator.Play("Player_Idle");
+                animator.Play("idle_football");
             }
             else
             {
-                animator.Play("Player_Run");
+                animator.Play("walking-football");
             }
         }
         else
         {
             if (rb.linearVelocityY > 0)
             {
-                animator.Play("Player_Jump");
+                animator.Play("idle_football");
             }
             else
             {
-                animator.Play("Player_Fall");
+                animator.Play("idle_football");
 
             }
         }
@@ -100,7 +100,7 @@ public class FootBallPlayer : MonoBehaviour
     public void ResetPlayerState()
     {
         rb.linearVelocity = Vector2.zero;
-        animator.Play("Player_Idle");
+        animator.Play("idle_football");
     }
 
 }

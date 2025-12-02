@@ -25,7 +25,7 @@ public class HP_System_BalloonBaby : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        Hit_Points.Instance.SetBalloonHP(2);
+        Hit_Points.Instance.SetBalloonHP(1);
     }
 
     private void OnCollisionStay2D(Collision2D collision)

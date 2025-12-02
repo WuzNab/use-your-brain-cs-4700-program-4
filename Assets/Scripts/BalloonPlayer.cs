@@ -83,22 +83,22 @@ public class BalloonPlayer : MonoBehaviour
         {
             if (moveInput == 0)
             {
-                animator.Play("Player_Idle");
+                animator.Play("idle+movement_baby");
             }
             else
             {
-                animator.Play("Player_Run");
+                animator.Play("idle+movement_baby");
             }
         }
         else
         {
             if (rb.linearVelocityY > 0)
             {
-                animator.Play("Player_Jump");
+                animator.Play("idle+movement_baby");
             }
             else
             {
-                animator.Play("Player_Fall");
+                animator.Play("idle+movement_baby");
 
             }
         }
@@ -115,7 +115,7 @@ public class BalloonPlayer : MonoBehaviour
     public void ResetPlayerState()
     {
         rb.linearVelocity = Vector2.zero;
-        animator.Play("Player_Idle");
+        animator.Play("idle+movement_baby");
     }
 
 }
