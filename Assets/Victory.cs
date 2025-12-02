@@ -5,12 +5,14 @@ public class Victory : MonoBehaviour
 {
     public void Replay()
     {
+        Time.timeScale = 1f;
         var current = SceneManager.GetActiveScene();
         SceneManager.LoadScene(current.buildIndex);
     }
 
     public void Exit()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
 
@@ -18,6 +20,8 @@ public class Victory : MonoBehaviour
     {
         int current = SceneManager.GetActiveScene().buildIndex;
         int next = current + 1;
+
+        Time.timeScale = 1f;
 
         SaveService.Instance.SetCompleted(current, true);
 
