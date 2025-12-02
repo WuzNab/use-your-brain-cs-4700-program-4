@@ -1,41 +1,25 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class BreakableBlockScript : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    private SpriteRenderer sr;
-    private AudioSource audioSource;
     public AudioClip breakSound;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void Start()
-    {
-        // Get or add AudioSource
-        audioSource = GetComponent<AudioSource>();
-
-        if (audioSource == null)
-            audioSource = gameObject.AddComponent<AudioSource>();
-
-        audioSource.playOnAwake = false;   
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // Only FootballPlayer can break it
         if (collision.collider.GetComponent<FootBallPlayer>() != null ||
             collision.collider.GetComponentInParent<FootBallPlayer>() != null)
         {
-            PlayBreakSoundAndDestroy();
+            BreakNow();
         }
     }
 
-    void PlayBreakSoundAndDestroy()
+    void BreakNow()
     {
+        // Play sound at the block’s position (sound survives after object is gone)
         if (breakSound != null)
-        {
-            audioSource.PlayOneShot(breakSound);
-        }
+            AudioSource.PlayClipAtPoint(breakSound, transform.position);
 
-        // Destroy block after sound finishes
-        Destroy(gameObject, breakSound.length);
+        Destroy(gameObject); // destroy instantly
     }
 }

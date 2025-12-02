@@ -7143,7 +7143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FootBallPlayer
   moveSpeed: 5
-  jumpForce: 8
+  jumpForce: 10
   groundCheck: {fileID: 351949656}
   groundCheckRadius: 0.2
   groundLayer:
