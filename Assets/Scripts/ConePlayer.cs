@@ -65,22 +65,22 @@ public class ConePlayer : MonoBehaviour
         {
             if (moveInput == 0)
             {
-                animator.Play("Player_Idle");
+                animator.Play("conehead_idle_one_tick");
             }
             else
             {
-                animator.Play("Player_Run");
+                animator.Play("conehead_walk_1_tick");
             }
         }
         else
         {
             if (rb.linearVelocityY > 0)
             {
-                animator.Play("Player_Jump");
+                animator.Play("conehead_idle_one_tick");
             }
             else
             {
-                animator.Play("Player_Fall");
+                animator.Play("conehead_idle_one_tick");
 
             }
         }
@@ -97,6 +97,6 @@ public class ConePlayer : MonoBehaviour
     public void ResetPlayerState()
     {
         rb.linearVelocity = Vector2.zero;
-        animator.Play("Player_Idle");
+        animator.Play("conehead_idle_one_tick");
     }
 }
