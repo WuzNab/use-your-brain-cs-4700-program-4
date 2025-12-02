@@ -3,7 +3,7 @@ using System.Collections;
 public class ConePlayer : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float jumpForce = 10.5f;
+    public float jumpForce = 9f;
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
